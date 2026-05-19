@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIMCHI FOOD - Comida Coreana Artesanal en Luque, Paraguay</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="KIMCHI FOOD: Auténtica comida coreana por demanda en Luque. Kimbap, Tteokbokki, Mandu y Kimchi artesanal cocinado con 24 horas de anticipación. Entregas lunes, miércoles y viernes.">
+    <meta name="keywords" content="kimchi, comida coreana, paraguay, luque, kimbap, tteokbokki, ramen, bibimbap, delivery coreano">
+    <meta name="author" content="KIMCHI FOOD">
+    
+    <!-- FontAwesome & Font Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Stylesheets -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/sections.css">
+</head>
+<body>
+
+    <!-- --- OVERLAY FOR MODALS/DRAWERS --- -->
+    <div class="body-overlay" id="bodyOverlay"></div>
+
+    <!-- --- TOAST NOTIFICATIONS --- -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- --- HEADER / NAVIGATION BAR --- -->
+    <header>
+        <div class="nav-container">
+            <a href="#inicio" class="logo">
+                <img src="assets/kimchifood.png" alt="Mascota Kimchi Food" class="logo-img">
+                <div class="logo-text">
+                    <span>KIMCHI FOOD</span>
+                    <span>RESTAURANTE</span>
+                </div>
+            </a>
+            
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                    <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+                    <li><a href="#tienda" class="nav-link">Menú & Tienda</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+            
+            <div class="nav-actions">
+                <button class="cart-icon-btn" onclick="openCartDrawer()" id="openCartBtn" title="Ver Carrito">
+                    <i class="fas fa-shopping-bag fa-lg"></i>
+                    <span class="cart-count">0</span>
+                </button>
+                <a href="#tienda" class="cta-btn">Pedir Online 🥢</a>
+                
+                <button class="hamburger" id="hamburger" aria-label="Abrir Menú">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ==========================================================================
+           1. INICIO (HERO SECTION)
+           ========================================================================== -->
+        <section id="inicio">
+            <div class="hero-content">
+                <div class="hero-tagline">
+                    <i class="fas fa-fire"></i> Sabor Auténtico Coreano
+                </div>
+                <h1 class="hero-title">Recetas Ancestrales a tu Puerta, <span>Hechas con Amor</span></h1>
+                <p class="hero-desc">
+                    En <b>KIMCHI FOOD</b> redefinimos el e-business gastronómico en Luque. Cocinamos platos tradicionales 100% bajo demanda con ingredientes importados premium. ¡Pre-ordena hoy y recíbelo fresco en tu hogar!
+                </p>
+                <div class="hero-cta-group">
+                    <a href="#tienda" class="hero-btn-primary">Ver Menú & Pedir 🛒</a>
+                    <a href="#nosotros" class="hero-btn-secondary">¿Cómo funciona? 🥢</a>
+                </div>
+            </div>
+            
+            <div class="hero-slider-wrapper">
+                <div class="hero-slider" id="heroSlider">
+                    <!-- Slides content will rotate automatically -->
+                    <div class="slide active">
+                        <img src="assets/promo-lunes-food.png" alt="Promo Lunes K-Drama" class="slide-img">
+                    </div>
+                    <div class="slide">
+                        <img src="assets/miercoles-food.png" alt="Promo Miércoles K-Pop" class="slide-img">
+                    </div>
+                    <div class="slide">
+                        <img src="assets/viernes-food.png" alt="Promo Viernes Seoul Night" class="slide-img">
+                    </div>
+                </div>
+                <div class="slider-dots" id="sliderDots"></div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           2. NOSOTROS (ABOUT SECTION)
+           ========================================================================== -->
+        <section id="nosotros">
+            <div class="section-header">
+                <span class="section-tag">Nosotros</span>
+                <h2 class="section-title">El Arte de la Cocina a Puertas Cerradas</h2>
+                <p class="section-subtitle">Conoce nuestra propuesta gastronómica 100% digital pensada para garantizar una experiencia gourmet real en Paraguay.</p>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-visual">
+                    <div class="about-mascot-container">
+                        <img src="assets/kimchifood.png" alt="Logo Mascota Kimchi" class="about-mascot-img">
+                    </div>
+                    <div class="about-experience-badge">
+                        <span class="badge-number">100%</span>
+                        <span class="badge-text">Artesanal</span>
+                    </div>
+                </div>
+                
+                <div class="about-content">
+                    <h3 class="about-rules-title">¿Por qué cocinamos bajo demanda?</h3>
+                    <p class="about-text">
+                        En <b>KIMCHI FOOD</b> no disponemos de un salón físico convencional. Operamos como una <i>"Ghost Kitchen"</i> en Luque dedicada al arte culinario tradicional coreano. Elaboramos cada plato de forma manual y minuciosa al recibir tu encargo.<br><br>
+                        Esta metodología nos permite cuidar cada detalle, utilizar fermentaciones tradicionales de meses (como en nuestro kimchi insignia) y traerte texturas incomparables sin necesidad de conservantes artificiales.
+                    </p>
+                    
+                    <h3 class="about-rules-title">Nuestras Reglas del Buen Sabor:</h3>
+                    <div class="about-rules-grid">
+                        <div class="rule-card">
+                            <i class="fas fa-hourglass-half"></i>
+                            <h4>24hs de Anticipación</h4>
+                            <p>Elaboramos tu comida bajo demanda. Haz tu pedido hoy para asegurar que los ingredientes reposen y se cocinen en el punto ideal.</p>
+                        </div>
+                        <div class="rule-card">
+                            <i class="fas fa-calendar-check"></i>
+                            <h4>Días de Entrega</h4>
+                            <p>Lunes, Miércoles y Viernes de 18:00 a 00:00 hs. Entregamos a domicilio en Luque y ciudades aledañas en Central.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           3. MENÚ & TIENDA (UNIFIED ORDERING & SHOWCASE SECTION)
+           ========================================================================== -->
+        <section id="tienda">
+            <div class="section-header">
+                <span class="section-tag">Menú & Tienda Digital</span>
+                <h2 class="section-title">Nuestras Joyas Culinarias</h2>
+                <p class="section-subtitle">Filtra nuestras delicias coreanas tradicionales por categoría y añádelas a tu carrito para realizar el pedido de forma rápida.</p>
+            </div>
+            
+            <div class="store-notice-bar">
+                <i class="fas fa-clock store-notice-icon"></i>
+                <div class="store-notice-text">
+                    <h4>⏰ Recordatorio de Horarios y Envío:</h4>
+                    <p>Cocinamos de forma fresca para entregarte los días <b>Lunes, Miércoles y Viernes de 18:00 a 00:00</b>. Los pedidos requieren 24 horas de anticipación. Costo de delivery fijo: <b>10.000 Gs.</b> en Luque y Central.</p>
+                </div>
+            </div>
+
+            <!-- Integrated showcase category filter tabs -->
+            <div class="showcase-filters">
+                <button class="filter-btn active" onclick="filterStore('todos', this)">Todos</button>
+                <button class="filter-btn" onclick="filterStore('entradas', this)">Entradas</button>
+                <button class="filter-btn" onclick="filterStore('platos', this)">Platos Fuertes</button>
+                <button class="filter-btn" onclick="filterStore('pote', this)">Pote Envasado</button>
+            </div>
+            
+            <div class="store-grid" id="storeGrid">
+                <!-- Shopping and menu items filtered dynamically, injected by app.js -->
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CONTACTO (CONTACT SECTION)
+           ========================================================================== -->
+        <section id="contacto">
+            <div class="section-header">
+                <span class="section-tag">Contacto</span>
+                <h2 class="section-title">Comunícate con Nosotros</h2>
+                <p class="section-subtitle">¿Tienes consultas, dudas sobre alérgenos o deseas un menú personalizado para un evento? Escríbenos.</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info-panel">
+                    <div class="contact-card">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="contact-text">
+                                <h5>Nuestra Cocina Central</h5>
+                                <p>Ignacio A. Pane 140, Luque 110921, Central, Paraguay</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div class="contact-text">
+                                <h5>Teléfono / WhatsApp</h5>
+                                <p><a href="https://wa.me/595991522885" target="_blank">0991 522 885</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="contact-text">
+                                <h5>Correo Electrónico</h5>
+                                <p><a href="mailto:kimchifoodrestaurantepy@gmail.com">kimchifoodrestaurantepy@gmail.com</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fab fa-instagram"></i></div>
+                            <div class="contact-text">
+                                <h5>Instagram Oficial</h5>
+                                <p><a href="https://instagram.com/kimchifoodrestaurantepy" target="_blank">@kimchifoodrestaurantepy</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Integrated Map iframe -->
+                    <div class="contact-map-wrapper">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.728956965158!2d-57.48805728867375!3d-25.263721377583626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945da5c7b39a8c17%3A0xe543e5c9b6fdf4!2sIgnacio%20A.%20Pane%2C%20Luque%2C%20Paraguay!5e0!3m2!1ses!2spy!4v1716150000000!5m2!1ses!2spy" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                
+                <!-- Contact Form panel -->
+                <div class="contact-form-panel">
+                    <h3 class="contact-form-title">Envíanos un Mensaje</h3>
+                    <p class="contact-form-desc">Responderemos tus dudas comerciales, corporativas o académicas en la brevedad posible.</p>
+                    
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="contactName">Nombre Completo</label>
+                            <input type="text" id="contactName" required placeholder="Ej: Juan Pérez">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Correo Electrónico</label>
+                            <input type="email" id="contactEmail" required placeholder="Ej: juan@gmail.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMsg">Mensaje / Consulta</label>
+                            <textarea id="contactMsg" rows="5" required placeholder="Escribe aquí tu consulta comercial..."></textarea>
+                        </div>
+                        <button type="submit" class="checkout-submit-btn">Enviar Mensaje <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==========================================================================
+       6. SHOPPING CART DRAWER (SLIDE-OUT PANEL)
+       ========================================================================== -->
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h3 class="cart-title"><i class="fas fa-shopping-basket"></i> Tu Carrito</h3>
+            <button class="close-cart-btn" onclick="closeCartDrawer()">&times;</button>
+        </div>
+        
+        <div class="cart-items-container" id="cartItemsContainer">
+            <!-- Dynamic Cart Items list -->
+        </div>
+        
+        <div class="cart-footer">
+            <div class="cart-summary-line">
+                <span>Subtotal:</span>
+                <span id="cartSubtotal">0 Gs.</span>
+            </div>
+            
+            <div class="cart-summary-line" id="cartDiscountContainer" style="display: none;">
+                <span>Descuento Promocional:</span>
+                <span id="cartDiscount" style="color: #55d01a;">0 Gs.</span>
+            </div>
+            
+            <div class="cart-summary-line">
+                <span>Costo de Delivery:</span>
+                <span id="cartDelivery">0 Gs.</span>
+            </div>
+            
+            <div class="cart-summary-line total">
+                <span>Total Estimado:</span>
+                <span id="cartTotal">0 Gs.</span>
+            </div>
+            
+            <button class="checkout-btn" onclick="openCheckoutModal()">
+                Completar Pedido <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+       7. CHECKOUT MODAL FORM
+       ========================================================================== -->
+    <div class="checkout-modal" id="checkoutModal">
+        <div class="checkout-modal-content">
+            <div class="checkout-modal-header">
+                <h3><i class="fas fa-clipboard-list"></i> Detalles de la Entrega</h3>
+                <button class="close-checkout-btn" onclick="closeCheckoutModal()">&times;</button>
+            </div>
+            
+            <form class="checkout-form" id="checkoutForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="clientName">Nombre Completo *</label>
+                        <input type="text" id="clientName" required placeholder="Ej. José Benítez">
+                    </div>
+                    <div class="form-group">
+                        <label for="clientPhone">Teléfono de Contacto *</label>
+                        <input type="tel" id="clientPhone" required placeholder="Ej. 0991522885">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="clientAddress">Dirección Completa de Entrega (Luque/Central) *</label>
+                    <input type="text" id="clientAddress" required placeholder="Ej. Avda. Humaitá 345, Luque">
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="deliveryDate">Fecha de Entrega (Mín. 24hs anticipo) *</label>
+                        <input type="date" id="deliveryDate" required>
+                        <span class="validation-notice" id="dateValidationNotice">
+                            <i class="fas fa-info-circle"></i> Entregas solo Lu, Mi, Vi de 18:00 a 00:00 hs.
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <label for="deliveryHour">Horario Estimado de Entrega *</label>
+                        <select id="deliveryHour" required>
+                            <option value="18:00">18:00 hs</option>
+                            <option value="19:00" selected>19:00 hs</option>
+                            <option value="20:00">20:00 hs</option>
+                            <option value="21:00">21:00 hs</option>
+                            <option value="22:00">22:00 hs</option>
+                            <option value="23:00">23:00 hs</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="paymentMethod">Método de Pago Preferido *</label>
+                    <select id="paymentMethod" required>
+                        <option value="Transferencia Bancaria">Transferencia Bancaria (SIPAP)</option>
+                        <option value="Giros Tigo">Giros Tigo</option>
+                        <option value="Efectivo al Delivery">Efectivo contra entrega</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="orderNotes">Notas adicionales o Alérgenos</label>
+                    <textarea id="orderNotes" rows="3" placeholder="Ej: Sin condimentos muy picantes, no colocar cubiertos plásticos..."></textarea>
+                </div>
+                
+                <button type="submit" class="checkout-submit-btn">
+                    <span id="submitBtnText">Confirmar Pedido vía WhatsApp 🥢</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div class="chatbot-widget" id="chatbotWidget">
+        <!-- Floating Chat Icon -->
+        <button class="chatbot-fab" id="toggleChatBtn" title="Chatea con Kimchi-Bot">
+            <div class="chatbot-pulse"></div>
+            <img src="assets/kimchifood.png" alt="Mascota Kimchi" class="chatbot-fab-img">
+        </button>
+        
+        <!-- Chat Window -->
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <div class="chat-header-profile">
+                    <img src="assets/kimchifood.png" alt="Mascota Kimchi" class="chat-header-img">
+                    <div class="chat-header-info">
+                        <span class="chat-header-name">Kimchi-Bot AI</span>
+                        <span class="chat-header-status">En línea</span>
+                    </div>
+                </div>
+                
+                <div class="chat-header-actions">
+                    <button class="chat-action-btn" id="chatCloseBtn" title="Cerrar Chat">&times;</button>
+                </div>
+            </div>
+            
+            <!-- Message board -->
+            <div class="chat-messages" id="chatMessages">
+                <div class="chat-msg bot">
+                    <div class="chat-msg-bubble">
+                        ¡Annyeonghaseyo! 🇰🇷 Bienvenid@ a <b>KIMCHI FOOD</b>. Soy Kimchi-Bot, tu asistente de inteligencia artificial y chef virtual. 🥢<br><br>
+                        ¿En qué puedo orientarte hoy? Te puedo dar detalles sobre nuestro sabroso menú, precios competitivos en Paraguay, horarios, delivery o nuestra regla de pedido con un día de anticipación.
+                    </div>
+                    <span class="chat-msg-time">Justo ahora</span>
+                </div>
+            </div>
+            
+            <!-- Message Input footer -->
+            <div class="chat-input-bar">
+                <textarea class="chat-input" id="chatInput" placeholder="Pregúntame sobre el menú o precios..." rows="1"></textarea>
+                <button class="chat-send-btn" id="chatSendBtn" title="Enviar Mensaje">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- --- FOOTER --- -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="#inicio" class="logo">
+                    <img src="assets/kimchifood.png" alt="Mascota Kimchi Food" class="logo-img">
+                    <div class="logo-text">
+                        <span>KIMCHI FOOD</span>
+                        <span>RESTAURANTE</span>
+                    </div>
+                </a>
+                <p>
+                    Trayéndote las mejores recetas e-business de comida callejera y tradicional de Seúl hasta Luque. Calidad insuperable, ingredientes frescos y cocinados bajo demanda.
+                </p>
+                <div class="social-links">
+                    <a href="https://instagram.com/kimchifoodrestaurantepy" target="_blank" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/595991522885" target="_blank" class="social-btn" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="footer-title">Enlaces Rápidos</h4>
+                <ul class="footer-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#tienda">Menú & Tienda</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 class="footer-title">Nuestro Menú</h4>
+                <ul class="footer-links">
+                    <li><a href="#tienda">Tteokbokki</a></li>
+                    <li><a href="#tienda">Kimbap Bulgogi</a></li>
+                    <li><a href="#tienda">Ramen Especial</a></li>
+                    <li><a href="#tienda">Bibimbap Bowl</a></li>
+                    <li><a href="#tienda">Kimchi Pote</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 class="footer-title">Información</h4>
+                <ul class="footer-info">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Ignacio A. Pane 140, Luque, Central, Paraguay</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-clock"></i>
+                        <span>Entregas: Lu, Mi, Vi de 18:00 a 00:00 hs (Pedidos con 24h de anticipo)</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        <span>WhatsApp: 0991 522 885</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 KIMCHI FOOD. Todos los derechos reservados. Proyecto Académico de E-Business.</p>
+            <p>Hecho con ❤️ en Luque, Paraguay</p>
+        </div>
+    </footer>
+
+    <!-- --- APP SCRIPT INJECTIONS --- -->
+    <script src="js/menu.js" charset="utf-8"></script>
+    <script src="js/cart.js" charset="utf-8"></script>
+    <script src="js/chatbot.js" charset="utf-8"></script>
+    <script src="js/app.js" charset="utf-8"></script>
+</body>
+</html>

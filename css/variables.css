@@ -1,0 +1,83 @@
+/* CSS DESIGN SYSTEM VARIABLES - KIMCHI FOOD */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+:root {
+    /* Color Palette - Seoul Night Bistro */
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #141414;
+    --bg-tertiary: #1e1e1e;
+    --bg-card: #181818;
+    --bg-glass: rgba(20, 20, 20, 0.75);
+    --bg-glass-card: rgba(26, 26, 26, 0.65);
+    
+    --accent-red: #e63946;
+    --accent-red-hover: #d62828;
+    --accent-orange: #f77f00;
+    --accent-orange-hover: #e07200;
+    --accent-gold: #fcbf49;
+    --accent-green: #38b000;
+    
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3b3;
+    --text-muted: #737373;
+    
+    /* Neon Glows & Gradients */
+    --gradient-primary: linear-gradient(135deg, var(--accent-red) 0%, var(--accent-orange) 100%);
+    --gradient-dark: linear-gradient(180deg, #141414 0%, #0a0a0a 100%);
+    --gradient-card: linear-gradient(145deg, #1c1c1c 0%, #121212 100%);
+    --gradient-text: linear-gradient(90deg, #ffffff 0%, #f77f00 100%);
+    --gradient-kpop: linear-gradient(135deg, #f72585 0%, #7209b7 50%, #3f37c9 100%);
+    
+    --neon-shadow-orange: 0 0 15px rgba(247, 127, 0, 0.3);
+    --neon-shadow-red: 0 0 15px rgba(230, 57, 70, 0.35);
+    --neon-border-orange: rgba(247, 127, 0, 0.25);
+    
+    /* Layout & Border Radius */
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-round: 50%;
+    
+    /* Shadows */
+    --shadow-soft: 0 8px 32px rgba(0, 0, 0, 0.3);
+    --shadow-heavy: 0 16px 48px rgba(0, 0, 0, 0.6);
+    --shadow-inset: inset 0 2px 4px rgba(255, 255, 255, 0.05);
+    
+    /* Borders */
+    --border-thin: 1px solid rgba(255, 255, 255, 0.07);
+    --border-thick: 2px solid rgba(255, 255, 255, 0.15);
+    --border-glow: 1px solid rgba(247, 127, 0, 0.3);
+    
+    /* Typography */
+    --font-title: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    
+    /* Animations & Transitions */
+    --transition-fast: 0.15s ease;
+    --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+    /* Blur effect for glassmorphism */
+    --blur-effect: blur(12px);
+}
+
+/* Base custom scrollbar for dark theme */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2a2a2a;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-orange);
+}
